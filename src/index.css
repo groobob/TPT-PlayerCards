@@ -41,6 +41,11 @@ nav {
   margin-left: auto;
 }
 
+.nav--logo {
+  margin-right: 25px;
+  border-radius: 20px;;
+}
+
 .nav--title {
   font-weight: 800;
   font-size: 40px;
@@ -76,11 +81,13 @@ nav {
   color: white;
   background-color: rgb(107, 122, 212);
   border-radius: 20px;
+  position: relative;
 }
 
 .card--icon {
   width: 300px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card--stats {
@@ -88,12 +95,16 @@ nav {
   font-weight: 400;
   font-size: 16px;
   margin-top: 5px;
+  margin-bottom: -5px;
 }
 
 .card--rating {
   font-weight: 800;
   font-size: 25px;
   text-align: center;
+  background-color: rgb(47, 63, 150);
+  padding-block: 10px;
+  margin-block: 20px;
 }
 
 .card--subtitles {
@@ -104,6 +115,7 @@ nav {
   font-weight: 600;
   font-size: 20px;
   margin-top: -20px;
+  
 }
 
 .card--scores {
@@ -134,4 +146,15 @@ nav {
   color: rgb(67, 67, 230);
   display: block;
   text-align: center;
+}
+
+.card--badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: aliceblue;
+  color: black;
+  padding: 0px 5px;
+  border-radius: 2px;
+  font-weight: 700;
 }

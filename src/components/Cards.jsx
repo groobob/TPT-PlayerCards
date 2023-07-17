@@ -4,6 +4,7 @@ export default function Cards(props)
 {
     return(
         <div className="card">
+            <div className="card--badge">{props.name}</div>
             <img src={`/images/icons/${props.icon}`} className="card--icon"/>
             <div className="card--stats">
                 <span>APM|{props.stats.apm} • </span>
