@@ -44,7 +44,7 @@ export default [
     {
         id: 4,
         name: "RKY1618",
-        icon: "rky1618",
+        icon: "rky1618.png",
         stats: {
             apm: "160.01",
             pps: "3.37",
