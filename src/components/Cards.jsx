@@ -12,13 +12,19 @@ export default function Cards(props)
             </div>
             <p className="card--rating">TR RATING | {props.tr}</p>
             <div className="card--records">
-                <p className="card--subtitle">SPRINT</p>
-                <p className="card--record">{props.sprint}</p>
-                <p className="card--subtitle">BLITZ</p>
-                <p className="card--record">{props.blitz}</p>
-                <p className="card--subtitle">ZEN</p>
-                <p className="card--record">{props.zen}</p>
+                <div className="card--subtitles">
+                    <p className="card--subtitle">SPRINT</p>
+                    <p className="card--subtitle">BLITZ</p>
+                    <p className="card--subtitle">ZEN</p>
+                    
+                </div>
+                <div className="card--scores">
+                    <p className="card--score">{props.sprint}</p>
+                    <p className="card--score">{props.blitz}</p>
+                    <p className="card--score">{props.zen}</p>
+                </div>
             </div>
+            <a href={`https://ch.tetr.io/u/${props.link}`} target="_blank" className="card--channelpage">CURRENT TETRA CHANNEL PAGE</a>
         </div>
     )
 }

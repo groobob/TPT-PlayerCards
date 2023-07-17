@@ -11,7 +11,8 @@ export default [
         tr: "24730.12",
         sprint: "0:30.823",
         blitz: "794,892",
-        zen: "328020"
+        zen: "328020",
+        link: "inanequark"
     },
     {
         id: 2,
@@ -25,7 +26,8 @@ export default [
         tr: "24955.55",
         sprint: "0:20.158",
         blitz: "1,279,084",
-        zen: "33,503,013"
+        zen: "33,503,013",
+        link: "296"
     },
     {
         id: 3,
@@ -36,10 +38,11 @@ export default [
             pps: "2.25",
             vs: "209.89",
         },
-        tr: "24835",
+        tr: "24835.55",
         sprint: "0.28.44",
         blitz: "401,080",
-        zen: "90,902,720"
+        zen: "90,902,720",
+        link: "shadow1211"
     },
     {
         id: 4,
@@ -53,7 +56,8 @@ export default [
         tr: "24989.11",
         sprint: "0:20.608",
         blitz: "1,006,058",
-        zen: "17,599,447"
+        zen: "17,599,447",
+        link: "rky1618"
     },
     {
         id: 5,
@@ -67,6 +71,7 @@ export default [
         tr: "24913.51",
         sprint: "0:20.898",
         blitz: "716,634",
-        zen: "4,587,829"
+        zen: "4,587,829",
+        link: "kittywhite"
     }
 ]

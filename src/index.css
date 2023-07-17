@@ -33,20 +33,17 @@ nav {
   color: white;
 }
 
-.nav--icon
-{
+.nav--icon {
   height: 80px;
+}
+
+.nav--icon--container {
+  margin-left: auto;
 }
 
 .nav--title {
   font-weight: 800;
   font-size: 40px;
-}
-
-.nav--discord {
-  margin-left: auto;
-  margin-right: 50px;
-  font-size: 30px;
 }
 
 .hero {
@@ -63,4 +60,78 @@ nav {
   font-weight: 600;
   font-size: 25px;
   max-width: 800px;
+}
+
+.cards {
+  display: flex;
+  gap: 200px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  left: 100px;
+  padding: 50px;
+}
+
+.card {
+  width: 300px;
+  color: white;
+  background-color: rgb(107, 122, 212);
+  border-radius: 20px;
+}
+
+.card--icon {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.card--stats {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.card--rating {
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+}
+
+.card--subtitles {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+.card--scores {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: -30px;
+}
+
+.card--subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card--score {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card--channelpage {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 900;
+  color: rgb(67, 67, 230);
+  display: block;
+  text-align: center;
 }
