@@ -24,7 +24,7 @@ async function Api(param) {
             pps: playerData.data.user.league.pps,
             vs: playerData.data.user.league.vs,
         },
-        tr: Math.round(playerData.data.user.league.rating),
+        tr: Math.round(playerData.data.user.league.rating * 100) / 100,
         sprint: Math.round(playerRecords.data.records['40l'].record.endcontext.finalTime) / 1000,
         blitz: playerRecords.data.records.blitz.record.endcontext.score,
         zen: playerRecords.data.zen.score,
