@@ -5,7 +5,10 @@ export default function Cards(props)
     return(
         <div className="card">
             <div className="card--badge">{props.name}</div>
-            <img src={`/images/icons/${props.icon}`} className="card--icon"/>
+            <img src={`https://tetr.io/user-content/avatars/${props.id}.jpg`} onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/images/icons/noimage.png';
+            }} className="card--icon" />
             <div className="card--stats">
                 <span>APM|{props.stats.apm} • </span>
                 <span>PPS|{props.stats.pps} • </span>

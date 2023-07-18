@@ -12,13 +12,10 @@ async function Api(param) {
         const recordResponse = await fetch(`https://corsproxy.io/?https://ch.tetr.io/api/users/${param}/records`);
         const record = await recordResponse.json();
       playerRecords = record;
-
-      console.log(record)
       
       return ({
         id: playerData.data.user._id,
         name: playerData.data.user.username,
-        icon: `${playerData.data.user.username}.png`,
         stats: {
             apm: playerData.data.user.league.apm,
             pps: playerData.data.user.league.pps,
