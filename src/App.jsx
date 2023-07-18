@@ -1,8 +1,8 @@
 import React from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import data from "./data"
 import Cards from "./components/Cards"
+import data from "./data"
 
 
 export default function App() {
