@@ -70,7 +70,7 @@ nav {
 .cards {
   display: flex;
   gap: 200px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow-x: auto;
   left: 100px;
   padding: 50px;
