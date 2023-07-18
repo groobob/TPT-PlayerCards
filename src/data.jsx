@@ -1,77 +1,55 @@
-export default [
-    {
-        id: 1,
-        name: "INANEQUARK",
-        icon: "inanequark.png",
+import React from "react"
+
+async function Api(param) {
+    let playerData;
+    let playerRecords;
+  
+    try {
+      const dataResponse = await fetch(`https://corsproxy.io/?https://ch.tetr.io/api/users/${param}`);
+      const data = await dataResponse.json();
+      playerData = data;
+
+        const recordResponse = await fetch(`https://corsproxy.io/?https://ch.tetr.io/api/users/${param}/records`);
+        const record = await recordResponse.json();
+      playerRecords = record;
+
+      console.log(record)
+      
+      return ({
+        id: playerData.data.user._id,
+        name: playerData.data.user.username,
+        icon: `${playerData.data.user.username}.png`,
         stats: {
-            apm: "90.17",
-            pps: "2.36",
-            vs: "186.32",
+            apm: playerData.data.user.league.apm,
+            pps: playerData.data.user.league.pps,
+            vs: playerData.data.user.league.vs,
         },
-        tr: "24730.12",
-        sprint: "0:30.823",
-        blitz: "794,892",
-        zen: "328020",
-        link: "inanequark"
-    },
-    {
-        id: 2,
-        name: "LIFELINE",
-        icon: "lifeline.png",
-        stats: {
-            apm: "124.85",
-            pps: "2.68",
-            vs: "251.42",
-        },
-        tr: "24955.55",
-        sprint: "0:20.158",
-        blitz: "1,279,084",
-        zen: "33,503,013",
-        link: "296"
-    },
-    {
-        id: 3,
-        name: "SHADOW1211",
-        icon: "shadow1211.png",
-        stats: {
-            apm: "96.29",
-            pps: "2.25",
-            vs: "209.89",
-        },
-        tr: "24835.55",
-        sprint: "0.28.44",
-        blitz: "401,080",
-        zen: "90,902,720",
-        link: "shadow1211"
-    },
-    {
-        id: 4,
-        name: "RKY1618",
-        icon: "rky1618.png",
-        stats: {
-            apm: "160.01",
-            pps: "3.37",
-            vs: "319.92",
-        },
-        tr: "24989.11",
-        sprint: "0:20.608",
-        blitz: "1,006,058",
-        zen: "17,599,447",
-        link: "rky1618"
-    },
-    {
-        id: 5,
-        name: "KITTYWHITE",
-        icon: "kittywhite.png",
-        stats: {
-            apm: "118.42",
-            pps: "3.13",
-            vs: "232.44",
-        },
-        tr: "24913.51",
-        sprint: "0:20.898",
-        blitz: "716,634",
-        zen: "4,587,829",
-        link: "kittywhite"
+        tr: Math.round(playerData.data.user.league.rating),
+        sprint: Math.round(playerRecords.data.records['40l'].record.endcontext.finalTime) / 1000,
+        blitz: playerRecords.data.records.blitz.record.endcontext.score,
+        zen: playerRecords.data.zen.score,
+        link: playerData.data.user.username
+      })
+    } catch (error) {
+      console.log(error);
     }
-]
+  }
+
+  const data = [];
+  Api("5e49ec93769dcb73ba5b6916").then(result => {
+    data.push(result);
+  });
+  Api("608af396cfc83c878c26c253").then(result => {
+    data.push(result);
+  });
+  Api("5f5b4025ea3d3a2b3abb86fb").then(result => {
+    data.push(result);
+  });
+  Api("5ed49367e059476c019a4daf").then(result => {
+    data.push(result);
+  });
+  Api("5eb343eea59e1e6c236f30bf").then(result => {
+    data.push(result);
+  });
+
+  export default data;
