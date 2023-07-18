@@ -1,4 +1,4 @@
-import React from "react"
+const data = [];
 
 async function Api(param) {
     let playerData;
@@ -35,21 +35,15 @@ async function Api(param) {
     }
   }
 
-  const data = [];
-  Api("5e49ec93769dcb73ba5b6916").then(result => {
-    data.push(result);
-  });
-  Api("608af396cfc83c878c26c253").then(result => {
-    data.push(result);
-  });
-  Api("5f5b4025ea3d3a2b3abb86fb").then(result => {
-    data.push(result);
-  });
-  Api("5ed49367e059476c019a4daf").then(result => {
-    data.push(result);
-  });
-  Api("5eb343eea59e1e6c236f30bf").then(result => {
-    data.push(result);
-  });
+function addData(param) {
+    Api(`${param}`).then(result => {
+        data.push(result);
+      });
+}
+  addData("5e49ec93769dcb73ba5b6916")
+  addData("608af396cfc83c878c26c253")
+  addData("5f5b4025ea3d3a2b3abb86fb")
+  addData("5ed49367e059476c019a4daf")
+  addData("5eb343eea59e1e6c236f30bf")
 
   export default data;
