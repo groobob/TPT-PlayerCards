@@ -79,7 +79,7 @@ nav {
 .card {
   width: 300px;
   color: white;
-  background-color: rgb(107, 122, 212);
+  background-color: rgb(91, 111, 221);
   border-radius: 20px;
   position: relative;
 }
@@ -140,10 +140,10 @@ nav {
 
 .card--channelpage {
   margin-top: -5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 15px;
   font-weight: 900;
-  color: rgb(67, 67, 230);
+  color: rgb(214, 214, 255);
   display: block;
   text-align: center;
 }
